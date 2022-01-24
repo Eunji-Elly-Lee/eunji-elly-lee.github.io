@@ -11,7 +11,7 @@ title:            Elly's Blog
 tagline:          'A Jekyll theme'
 description:      'Hello!'
 url:              https://eunji-elly-lee.github.io/
-baseurl:          /
+baseurl:          
 
 author:
   name:           'Eunji Elly Lee'
