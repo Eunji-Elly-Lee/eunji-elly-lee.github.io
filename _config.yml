@@ -1,5 +1,5 @@
-title: Long Haul
-description: Long Form Jekyll theme built with SASS / COMPASS / SUSY
+title: Elly's Blog
+# description: Long Form Jekyll theme built with SASS / COMPASS / SUSY
 
 url: https://eunji-elly-lee.github.io/
 paginate_path: "blog/page:num/"
@@ -22,11 +22,11 @@ navigation:
     url: /contact
 
 social:
-  github: brianmaierjr
-  twitter: brianmaierjr
-  facebook: brianmaierjr
-  email: brimaidesigns@gmail.com
-  linkedin: brianmaierjr
+  github: Eunji-Elly-Lee
+#  twitter: brianmaierjr
+#  facebook: brianmaierjr
+#  email: brimaidesigns@gmail.com
+  linkedin: eunji-elly-lee
 
 google_analytics: "UA-58263416-1"
 
