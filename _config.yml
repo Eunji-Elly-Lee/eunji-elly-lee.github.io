@@ -1,5 +1,5 @@
 title: Elly's Blog
-# description: Long Form Jekyll theme built with SASS / COMPASS / SUSY
+description: Elly's Blog
 
 url: https://eunji-elly-lee.github.io/
 paginate_path: "blog/page:num/"
@@ -28,7 +28,7 @@ social:
 #  email: brimaidesigns@gmail.com
   linkedin: eunji-elly-lee
 
-google_analytics: "UA-58263416-1"
+google-gtag_analytics: "G-VFHB1MD9EC"
 
 disqus:
-    shortname: brianmaierjr
+  shortname: ellysgitblog
