@@ -28,7 +28,7 @@ social:
 #  email: brimaidesigns@gmail.com
   linkedin: eunji-elly-lee
 
-google-gtag_analytics: "G-VFHB1MD9EC"
+google_analytics: "G-VFHB1MD9EC"
 
 disqus:
   shortname: ellysgitblog
