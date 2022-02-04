@@ -3,9 +3,8 @@ layout: default
 title: About Java
 ---
 
-<div class="home" id="home">
-  <h1 class="pageTitle">Java Posts</h1>
-  {%- for post in site.categories[java] -%}
+<div class="post">
+	{%- for post in site.categories[java] -%}
     <div class="posts noList">
         {%- for post in paginator.posts -%}
         <article>
@@ -24,5 +23,5 @@ title: About Java
         <a href="{{ paginator.next_page_path }}" class="next button__outline">Older Posts</a>
         {%- endif -%}
     </div>
-  {%- endfor -%}
+    {%- endfor -%}
 </div>
