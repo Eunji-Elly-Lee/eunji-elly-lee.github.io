@@ -3,7 +3,7 @@ layout: default
 ---
 <div class="home" id="home">
   {% assign category = page.category | default: page.title %}
-  <h1 class="pageTitle">"{{ page.title }}"</h1>
+  <h1 class="pageTitle">{{ page.title }} Posts</h1>
   <div class="posts noList">    
     {%- for post in site.categories[category] -%}
       <article>
