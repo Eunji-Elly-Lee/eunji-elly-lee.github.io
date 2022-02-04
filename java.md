@@ -4,7 +4,6 @@ title: About Java
 ---
 
 <div class="post">
-	{%- for post in site.categories[java] -%}
     <div class="posts noList">
         {%- for post in paginator.posts -%}
         <article>
@@ -23,5 +22,4 @@ title: About Java
         <a href="{{ paginator.next_page_path }}" class="next button__outline">Older Posts</a>
         {%- endif -%}
     </div>
-    {%- endfor -%}
 </div>
