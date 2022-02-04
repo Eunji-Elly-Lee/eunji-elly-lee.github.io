@@ -18,6 +18,8 @@ navigation:
     url: /index.html
   - title: About
     url: /about
+  - title: Java
+    url: /java
 #  - title: Contact
 #    url: /contact
 
