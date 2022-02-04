@@ -5,7 +5,6 @@ title: About Java
 
 <div class="post">
 	<h1 class="pageTitle">About Java</h1>
-	<img src="{{ '/assets/img/mountain.jpg' }}" alt="">
 	<p class="intro">Hi, my name is Eunji Elly Lee.</p>
 	<p>I am an aspiring IT professional with a background in software development.</p>
 	<h2>My IT skills</h2>
