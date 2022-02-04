@@ -2,7 +2,7 @@
 layout:     post
 title:      "Test Java Post"
 date:       2022-02-03
-categories: [java]
+categories: [Java]
 ---
 
 <p class="intro"><span class="dropcap">J</span>ava!</p>
