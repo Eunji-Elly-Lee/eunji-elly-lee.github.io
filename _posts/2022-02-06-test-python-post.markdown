@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "Test Java Post"
+title:      "Test Python Post"
 date:       2022-02-03
 categories: [Python]
 ---
