@@ -18,6 +18,6 @@ title: About Elly
   		<li>JAVASCRIPT</li>
   		<li>BOOTSTRAP</li>
   	</ul>
-	<p>In my spare time, I love watching movies! I love movies, especially Marvel Cinematic Universe
-	and the Lord of the Rings. Of course, I love all movies except ghost movies!</p>
+	<p>In my spare time, I love watching movies! I love movies, especially Marvel Cinematic Universe.
+	Of course, I love all movies except ghost movies!</p>
 </div>
