@@ -32,3 +32,12 @@ google_analytics: "G-XS0W79XSYK"
 
 disqus:
   shortname: ellysgitblog
+
+tipue_search:
+  include:
+    pages: false
+    collections: []
+  exclude:
+    files: [search.html, index.html, tags.html]
+    categories: []
+    tags: []
