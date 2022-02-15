@@ -23,7 +23,7 @@ One of Java's big features is that it is a platform-independent language. When c
 
 **Java's basic syntax**
 
-This is the code of a Java file named HelloWorld.java
+This is a sample code of a Java file named HelloWorld.java
 
 ```java
 package packagename;
