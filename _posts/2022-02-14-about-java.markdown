@@ -10,7 +10,7 @@ categories: [Java]
 
 One of Java's big features is that it is a platform-independent language. When compiling Java code, a Java compiler generates a class file (.class) that is byte code, which can run on any Java virtual machine regardless of the underlying computer architecture.
 
-![Java logo](https://w.namu.la/s/95f3898eb4996f6ba5a3930b212b295da56e062e9427da87331a510d3d868bd81f24d10d242ca0d93f4ad94053b9321549cb4590ea815a8d39ba92cde1a7da442da8503354444ceb7fa3f72486d3d3d278c082ed6739920f027739705079953f)
+<img src="https://w.namu.la/s/95f3898eb4996f6ba5a3930b212b295da56e062e9427da87331a510d3d868bd81f24d10d242ca0d93f4ad94053b9321549cb4590ea815a8d39ba92cde1a7da442da8503354444ceb7fa3f72486d3d3d278c082ed6739920f027739705079953f" width="50%">
 
 **Java's core concepts**
 
