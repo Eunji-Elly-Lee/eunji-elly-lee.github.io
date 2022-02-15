@@ -1,29 +1,32 @@
 ---
 layout:     post
-title:      "About Java"
-date:       2022-02-14
+title:      "Basic Java"
+date:       2022-02-15
 image:      java_code.jpg
 categories: [Java]
 ---
 
 <p class="intro"><span class="dropcap">J</span>ava is a high-level, object-oriented, general-purpose programming language developed in 1995 by James Gosling.</p>
 
-One of Java's big features is that it is a platform-independent language. When compiling Java code, a Java compiler generates a class file (.class) that is byte code, which can run on any Java virtual machine regardless of the underlying computer architecture.
+One of Java's big features is that it is a platform-independent language. It means, when compiling Java code, a Java compiler generates a class file whose extension is .class that is byte code, which can run on any Java virtual machine regardless of the underlying computer architecture. Java is extensively used worldwide with this advantage and a feature of the English-like programming language.
 
 <div style="text-align:center">
 <img src="https://w.namu.la/s/95f3898eb4996f6ba5a3930b212b295da56e062e9427da87331a510d3d868bd81f24d10d242ca0d93f4ad94053b9321549cb4590ea815a8d39ba92cde1a7da442da8503354444ceb7fa3f72486d3d3d278c082ed6739920f027739705079953f" width="50%">
 </div>
 
-**Java's core concepts**
+**Java's Basic terminologies**
 
-- Object: An object is an instance of a class and has states and behaviors.
-- Class: A class is a template or blueprint that contains the behaviors and states of its instance.
-- Method: A method is a behavior of an object.
-- Instance variable: An instance variable creates a state of an object with its assigned value.
+These are descriptions of the five most basic terminologies used within Java programming.
+
+- **Class**: A class is a template or blueprint that contains the behaviors and states of its instance.
+- **Object**: An object is an instance of a class and has states and behaviors.
+- **Method**: A method is a behavior of an object.
+- **Constructor**: A constructor is a special kind of method which is a maker of an instance of an object.
+- **Instance variable**: An instance variable is a state value of an object assigned.
 
 **Java's basic syntax**
 
-This is a sample code of a Java file named HelloWorld.java
+This is a sample code of a Java file named HelloWorld.java We can see basic syntax from this code.
 
 ```java
 package packagename;
@@ -50,4 +53,4 @@ public class HelloWorld {
 - A Java statement ends with a semi-colon (;).
 - Java is a case-sensitive language. A class name should start with an upper case letter, while a method name should start with a lower case letter.
 - In the case of a compound word, the first letter of the following word is capitalized (e.g. camelCase). However, even if it is a compound word, a package name should be all in lower case letters, and a constant name should be all upper case letters and combined using underscore (_).
-- The single-line comment puts two forward slashes (//) in front of a sentence. The multi-line comment is written between a combination of one forward-slash and asterisk (/* ) and the other of one asterisk and forward-slash ( */).
+- The single-line comment puts two forward slashes (//) in front of a sentence. The multi-line comment is written between a combination of one forward-slash and asterisk (/&#42;) and the other of one asterisk and forward-slash (&#42;/).
