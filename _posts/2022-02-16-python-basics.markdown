@@ -20,7 +20,7 @@ Python is known to have a concise syntax and grammar with the use of indentation
 </video>
 </div> -->
 
-## Python's Environment Setup
+### Python's Environment Setup
 
 We can download a suitable Python version for our local computer system from this link. In my case, I selected the 3.8.7 version for Windows.
 
@@ -66,7 +66,7 @@ Run a command pallet with the shortcut 'Ctrl + Shift + p' for an installation of
 
 It is all ready to sail into the Python programming world!
 
-## Python's Basic Syntax
+### Python's Basic Syntax
 
 As mentioned earlier, Python's syntax is characterized by simplicity. We will look into Python's syntax by comparing it with Java.
 
@@ -127,7 +127,7 @@ def function01():
       print("Bye!")
 ```
 
-## Python's Print
+### Python's Print
 
 We will simply print out something using Python.
 
@@ -174,7 +174,7 @@ print("I like {number}, and {programming}!".format(programming="Python", number=
 
 If we specify variable names in braces ({}), they will be matched well regardless of the order and printed.
 
-## Python's Fucntion
+### Python's Fucntion
 
 We can notice that Python's function is the same as Java's method. A Python's function can be easily defined as the 'def' keyword. Similar to Java's method syntax, there may or may not be parameters in parentheses (()) after a function name. There may or may not be a return of a value using the 'return' keyword as well.
 
@@ -191,7 +191,7 @@ open_accout()
 deposit(1000, 500)
 ```
 
-## Python's Data Structure
+### Python's Data Structure
 
 We will look into Python's four data structures. We can think of these as similar to Java's List and HashMap.
 
@@ -221,7 +221,7 @@ cabinet = {"A-1":"Alpha", "B-1":"Bravo", "C-1":"Charlie"}
 cabinet_set = set(cabinet)
 ```
 
-## Python's Import
+### Python's Import
 
 Python's import is similar to Java's, but there is a kind of difference.
 
@@ -234,7 +234,7 @@ from math import *
 
 The most impressive thing about Python's import function is that using an alias is allowed. An alias is applied like this using the 'as' keyword: `import random as rd`. We can give both modules and functions the aliases we want.
 
-## Jump into Python
+### Jump into Python
 
 We spent this journey together to learn about Python's basics. There are more things left to learn, such as Python's class, inheritance, and package. We'll be able to look into these next time as working on some projects together.
 
