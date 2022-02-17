@@ -144,7 +144,7 @@ Interestingly, the result of the first code is "**Hello2022**" without whitespac
 
 There are three ways to output using the format function:
 
-1. 
+1)
 
 ```python
 print("I like %d!" %7) 
@@ -154,7 +154,7 @@ print("I like %d, and %s!" %(7, "Python"))
 
 '%d' represents an Int type, and '%s' represents a String type.
 
-2. 
+2)
 
 ```python
 print("I like {}!".format(7)) 
@@ -165,7 +165,8 @@ print("I like {1}, and {0}!".format(7, "Python"))
 
 If we don't put the index number in braces ({}), it will be matched in order and printed.
 
-3. 
+3)
+
 ```python
 print("I like {number}, and {programming}!".format(number=7, programming="Python"))
 print("I like {number}, and {programming}!".format(programming="Python", number=7))
@@ -194,25 +195,25 @@ deposit(1000, 500)
 
 We will look into Python's four data structures. We can think of these as similar to Java's List and HashMap.
 
-1. **List**: Values are stored in order, and it is free to modify and delete elements after creation. It is created using brackets ([]). We can use various functions such as append(), insert(), pop(), clear(), sort().
+1) **List**: Values are stored in order, and it is free to modify and delete elements after creation. It is created using brackets ([]). We can use various functions such as append(), insert(), pop(), clear(), sort().
 
 ```python
 numbers = [10, 20, 30]
 ```
 
-2. **Tuple**: This data structure stores values in order like List, but elements generated once cannot be modified and deleted. However, since there is no change in the data, the advantage is that the processing speed is faster than List. It is created using parentheses (()).
+2) **Tuple**: This data structure stores values in order like List, but elements generated once cannot be modified and deleted. However, since there is no change in the data, the advantage is that the processing speed is faster than List. It is created using parentheses (()).
 
 ```python
 numbers = (10, 20, 30)
 ```
 
-3. **Dictionary**: It stores data as a pair of a key and a value. The key and value are separated by a colon (:). Keys cannot be duplicated, and data management is done using the keys easily. It is created using braces ({}).
+3) **Dictionary**: It stores data as a pair of a key and a value. The key and value are separated by a colon (:). Keys cannot be duplicated, and data management is done using the keys easily. It is created using braces ({}).
 
 ```python
 cabinet = {"A-1":"Alpha", "B-1":"Bravo", "C-1":"Charlie"}
 ```
 
-4. **Set**: It stores data regardless of order and does not allow duplicated values. This Set can function like a set in mathematics. It is created using braces ({}) or set() function. When converting Dictionary into Set using set() function, it becomes a set of keys.
+4) **Set**: It stores data regardless of order and does not allow duplicated values. This Set can function like a set in mathematics. It is created using braces ({}) or set() function. When converting Dictionary into Set using set() function, it becomes a set of keys.
 
 ```python
 numbers = {10, 20, 30}
