@@ -52,7 +52,7 @@ Create a temporary working folder for testing, and open the folder using VS Code
 <img src="/assets/img/python_img/python_simple_file.png" width="80%">
 </div>
 
-In the Debug section, we can see a link 'create a launch.json file.' Click the link, and select Python. We will have a launch.json file now.
+In the Debug section, we can see a link 'create a launch.json file.' Click the link, and select Python as an option. We have a launch.json file now.
 
 <div style="text-align:center">
 <img src="/assets/img/python_img/python_launch_file.png" width="80%">
@@ -106,7 +106,7 @@ x = lambda y: y + 1
 
 **Comment**
 
-Java's single-line comment starts with two slashes (//), while in Python, a comment starts with a hash (#). We can also use triple quotations (''') at the beginning and end of the multi-line comments. One good tip is to drag the lines we want to change into the comments, and press the shortcut 'Ctrl + / .'
+Java's single-line comment starts with two slashes (//), while in Python, a comment starts with a hash (#). We can also use triple quotations (&#39;&#39;&#39;) at the beginning and end of the multi-line comments. One good tip is to drag the lines we want to change into the comments, and press the shortcut 'Ctrl + / .'
 
 ```python
 # This is a comment
@@ -117,7 +117,7 @@ the multi-line comment'''
 
 **Indentation**
 
-Python is very strict to indentation. Java defines a block of code using braces ({}), but Python removed it for concise syntax. Indentation is used to highlight the blocks of code in Python. Note that the first line of the code cannot have any indentation. We should avoid mixing tabs and whitespaces for making indentation, and using whitespaces are better than using taps.
+Python is very strict to indentation. Java defines a block of code using braces ({ }), but Python removed it for concise syntax. Indentation is used to highlight the blocks of code in Python. Note that the first line of the code cannot have any indentation. We should avoid mixing tabs and whitespaces for making indentation, and using whitespaces are better than using taps.
 
 ```python
 def function01():
@@ -147,9 +147,9 @@ There are three ways to output using the format function:
 1)
 
 ```python
-print("I like %d!" %7) 
-print("I like %s!" %"Python") 
-print("I like %d, and %s!" %(7, "Python"))
+print("I like %d the most!" %7) 
+print("I like %s because it's fun!" %"Python") 
+print("I like %d, and %s so much!" %(7, "Python"))
 ```
 
 '%d' represents an Int type, and '%s' represents a String type.
@@ -157,33 +157,33 @@ print("I like %d, and %s!" %(7, "Python"))
 2)
 
 ```python
-print("I like {}!".format(7)) 
-print("I like {}, and {}!".format(7, "Python"))
-print("I like {0}, and {1}!".format(7, "Python"))
-print("I like {1}, and {0}!".format(7, "Python"))
+print("I like {} the most!".format(7)) 
+print("I like {}, and {} so much!".format(7, "Python"))
+print("I like {0}, and {1} so much!".format(7, "Python"))
+print("I like {1}, and {0} so much!".format(7, "Python"))
 ```
 
-If we don't put the index number in braces ({}), it will be matched in order and printed.
+If we don't put the index number in braces ({ }), it will be matched in order and printed.
 
 3)
 
 ```python
-print("I like {number}, and {programming}!".format(number=7, programming="Python"))
-print("I like {number}, and {programming}!".format(programming="Python", number=7))
+print("I like {num}, and {lang} so much!".format(num=7, lang="Python"))
+print("I like {num}, and {lang} so much!".format(lang="Python", num=7))
 ```
 
-If we specify variable names in braces ({}), they will be matched well regardless of the order and printed.
+If we specify variable names in braces ({ }), they will be matched well regardless of the order and printed.
 
 ### Python's Fucntion
 
-We can notice that Python's function is the same as Java's method. A Python's function can be easily defined as the 'def' keyword. Similar to Java's method syntax, there may or may not be parameters in parentheses (()) after a function name. There may or may not be a return of a value using the 'return' keyword as well.
+We can notice that Python's function is the same as Java's method. A Python's function can be easily defined as the 'def' keyword. Similar to Java's method syntax, there may or may not be parameters in parentheses (( )) after a function name. There may or may not be a return of a value using the 'return' keyword as well.
 
 ```python
 def open_accout():
    print("New account open!")
 
 def deposit(balance, money):
-   print("The deposit has been completed. The balance is ${0}.".format(balance + money))
+   print("Deposit has been completed. Balance: ${0}".format(balance + money))
    return balance + money
 
 # Call the function
@@ -195,25 +195,25 @@ deposit(1000, 500)
 
 We will look into Python's four data structures. We can think of these as similar to Java's List and HashMap.
 
-1) **List**: Values are stored in order, and it is free to modify and delete elements after creation. It is created using brackets ([]). We can use various functions such as append(), insert(), pop(), clear(), sort().
+1) **List**: Values are stored in order, and it is free to modify and delete elements after creation. It is created using brackets ([ ]). We can use various functions such as append(), insert(), pop(), clear(), sort().
 
 ```python
 numbers = [10, 20, 30]
 ```
 
-2) **Tuple**: This data structure stores values in order like List, but elements generated once cannot be modified and deleted. However, since there is no change in the data, the advantage is that the processing speed is faster than List. It is created using parentheses (()).
+2) **Tuple**: This data structure stores values in order like List, but elements generated once cannot be modified and deleted. However, since there is no change in the data, the advantage is that the processing speed is faster than List. It is created using parentheses (( )).
 
 ```python
 numbers = (10, 20, 30)
 ```
 
-3) **Dictionary**: It stores data as a pair of a key and a value. The key and value are separated by a colon (:). Keys cannot be duplicated, and data management is done using the keys easily. It is created using braces ({}).
+3) **Dictionary**: It stores data as a pair of a key and a value. The key and value are separated by a colon (:). Keys cannot be duplicated, and data management is done using the keys easily. It is created using braces ({ }).
 
 ```python
 cabinet = {"A-1":"Alpha", "B-1":"Bravo", "C-1":"Charlie"}
 ```
 
-4) **Set**: It stores data regardless of order and does not allow duplicated values. This Set can function like a set in mathematics. It is created using braces ({}) or set() function. When converting Dictionary into Set using set() function, it becomes a set of keys.
+4) **Set**: It stores data regardless of order and does not allow duplicated values. This Set can function like a set in mathematics. It is created using braces ({ }) or set() function. When converting Dictionary into Set using set() function, it becomes a set of keys.
 
 ```python
 numbers = {10, 20, 30}
@@ -223,7 +223,7 @@ cabinet_set = set(cabinet)
 
 ### Python's Import
 
-Python's import is similar to Java's, but there is a kind of difference.
+Python's import is similar to Java's, but there is a kind of difference. The similarity is the use of the 'import' keyword, and the difference will be the use of the 'from' keyword.
 
 When importing the entire function of a module, we can simply write the name of the module after the 'import' keyword, like this: `import random`. If we want to get only one or a few functions from a module, we will use the 'from' keyword. Interestingly, we can also import all the functions of a module using this 'from' keyword.
 
@@ -242,8 +242,9 @@ Wrap up this time by writing a simple program with what we learned today.
 
 ```python
 '''You are a taxi driver.
-Today, you only picked up passengers who took between 5 and 15 minutes to drive time.
-Create a program to calculate how many passengers you've picked up.'''
+You only pick up passengers
+who take between 5 and 15 minutes to drive time.
+Create a program to calculate how many passengers you can pick up.'''
 
 from random import *
 
@@ -255,10 +256,11 @@ for i in range(1, 51):
    time = randrange(5, 51)
    
    if 5 <= time <= 15:
-      print("[O] No {0}. passenger: driving time {1} minutes".format(i, time))
+      print("No {0}. passenger: Driving time {1} minutes".format(i, time))
       count += 1
    else:
-      print("[ ] No {0}. passenger: driving time {1} minutes".format(i, time))
+      print("No {0}. passenger: Driving time {1} minutes".format(i, time))
 
+# Display the calculation result
 print("Total number of passengers: {0}".format(count))
 ```
