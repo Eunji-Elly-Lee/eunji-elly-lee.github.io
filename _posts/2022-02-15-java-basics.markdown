@@ -53,4 +53,4 @@ public class HelloWorld {
 - A Java statement ends with a semi-colon (;).
 - Java is a case-sensitive language. A class name should start with an upper case letter, while a method name should start with a lower case letter.
 - In the case of a compound word, the first letter of the following word is capitalized (e.g. camelCase). However, even if it is a compound word, a package name should be all in lower case letters, and a constant name should be all upper case letters and combined using underscore (_).
-- The single-line comment puts two forward slashes (//) in front of a sentence. The multi-line comment is written between a combination of one forward-slash and asterisk (/&#42;) and the other of one asterisk and forward-slash (&#42;/).
+- The single-line comment puts two slashes (//) in front of a sentence. The multi-line comment is written between a combination of one slash and asterisk (/&#42;) and the other of one asterisk and slash (&#42;/).
