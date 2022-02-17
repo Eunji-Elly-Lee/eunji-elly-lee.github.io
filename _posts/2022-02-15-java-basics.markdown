@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "Basic Java"
+title:      "Java Basics"
 date:       2022-02-15
 image:      java_code.jpg
 categories: [Java]
@@ -14,7 +14,7 @@ One of Java's big features is that it is a platform-independent language. It mea
 <img src="https://w.namu.la/s/95f3898eb4996f6ba5a3930b212b295da56e062e9427da87331a510d3d868bd81f24d10d242ca0d93f4ad94053b9321549cb4590ea815a8d39ba92cde1a7da442da8503354444ceb7fa3f72486d3d3d278c082ed6739920f027739705079953f" width="50%">
 </div>
 
-**Java's Basic terminologies**
+### Java's Basic Terminologies
 
 These are descriptions of the five most basic terminologies used within Java programming.
 
@@ -24,7 +24,7 @@ These are descriptions of the five most basic terminologies used within Java pro
 - **Constructor**: A constructor is a special kind of method which is a maker of an instance of an object.
 - **Instance variable**: An instance variable is a state value of an object assigned.
 
-**Java's basic syntax**
+### Java's Basic Syntax
 
 This is a sample code of a Java file named HelloWorld.java We can see basic syntax from this code.
 
