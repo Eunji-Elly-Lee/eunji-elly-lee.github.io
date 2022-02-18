@@ -213,7 +213,7 @@ numbers = (10, 20, 30)
 cabinet = {"A-1":"Alpha", "B-1":"Bravo", "C-1":"Charlie"}
 ```
 
-4) **Set**: It stores data regardless of order and does not allow duplicated values. This Set can function like a set in mathematics. It is created using braces ({ }) or set() function. When converting Dictionary into Set using set() function, it becomes a set of keys.
+4) **Set**: It stores data regardless of order and does not allow duplicated values. This Set can function like a set of mathematics. It is created using braces ({ }) or set() function. When converting Dictionary into Set using set() function, it becomes a set of keys.
 
 ```python
 numbers = {10, 20, 30}
