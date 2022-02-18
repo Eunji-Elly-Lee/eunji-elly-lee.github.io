@@ -52,7 +52,7 @@ Create a temporary working folder for testing, and open the folder using VS Code
 <img src="/assets/img/python_img/python_simple_file.png" width="80%">
 </div>
 
-In the Debug section, we can see a link 'create a launch.json file.' Click the link, and select Python as an option. We have a launch.json file now.
+In the Debug section, we can see a link 'create a launch.json file.' Click the link, and select 'Python File' as an option. We have a launch.json file now.
 
 <div style="text-align:center">
 <img src="/assets/img/python_img/python_launch_file.png" width="80%">
