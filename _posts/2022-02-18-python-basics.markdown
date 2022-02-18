@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Python Basics"
-date:       2022-02-16
+date:       2022-02-18
 image:      python_code.jpg
 categories: [Python]
 ---
@@ -133,7 +133,7 @@ We will simply print out something using Python.
 
 Python's print() statement is the same as Java's println() statement. After printing, a cursor is automatically moved to the next line.
 
-We can see that this `System.out.println("Hello" + 2022);` code of Java is output as "**Hello2022**." However, we cannot use String and Int data together with plus (+) in print() statement in Python without type converting. It is permissible to simply output these two different types of data together using a comma (,).
+We can see that this `System.out.println("Hello" + 2022);` code of Java is output as "**Hello2022**." However, we cannot use String and Int data together with plus (+) in print() statement in Python without type converting. It is permissible to simply print these two different types of data together using a comma (,).
 
 ```python
 print("Hello" + str(2022))
@@ -142,7 +142,7 @@ print("Hello", 2022)
 
 Interestingly, the result of the first code is "**Hello2022**" without whitespace like Java's, but the second code automatically inserts whitespace between the two words, like "**Hello 2022**."
 
-There are three ways to output using the format function:
+There are three ways to print out using the format function:
 
 1)
 
