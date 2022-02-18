@@ -58,7 +58,7 @@ In the Debug section, we can see a link 'create a launch.json file.' Click the l
 <img src="/assets/img/python_img/python_launch_file.png" width="80%">
 </div>
 
-Run a command pallet with the shortcut 'Ctrl + Shift + p' for an installation of the Python interpreter, and search for 'python select interpreter.' After then, we should select one like our Python version currently installed.
+Run a command pallet with the shortcut 'Ctrl + Shift + p' for an installation of the Python interpreter, and search for 'Python: Select Interpreter.' After then, we should select one like our Python version currently installed.
 
 <div style="text-align:center">
 <img src="/assets/img/python_img/python_interpreter.png" width="80%">
