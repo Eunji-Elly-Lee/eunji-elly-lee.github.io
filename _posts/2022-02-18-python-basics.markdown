@@ -231,7 +231,7 @@ When importing the entire function of a module, we can simply write the name of 
 import random
 
 from random import randint, choice
-from math import *
+from random import *
 
 import random as rd
 from random import randint as rd
