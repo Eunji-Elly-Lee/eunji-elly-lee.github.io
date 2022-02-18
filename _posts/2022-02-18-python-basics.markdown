@@ -228,13 +228,8 @@ Python's import is similar to Java's, but there is a kind of difference. The sim
 When importing the entire function of a module, we can simply write the name of the module after the 'import' keyword, like this: `import random`. If we want to get only one or a few functions from a module, we will use the 'from' keyword. Interestingly, we can also import all the functions of a module using this 'from' keyword.
 
 ```python
-import random
-
 from random import randint, choice
 from random import *
-
-import random as rd
-from random import randint as rd
 ```
 
 The most impressive thing about Python's import function is that using an alias is allowed. An alias is applied like this using the 'as' keyword: `import random as rd`. We can give both modules and functions the aliases we want.
