@@ -201,7 +201,7 @@ Now, we will look into Python's four data structures. We can think of these as s
 numbers = [10, 20, 30]
 ```
 
-2) **Tuple**: This data structure stores values in order like List, but elements generated once cannot be modified or deleted. However, since there is no change in the data, the advantage is that the processing speed is faster than List. It is created using parentheses (( )).
+2) **Tuple**: This data structure stores values in order like List, but elements generated once cannot be modified or deleted. However, since there is no change in the data, the advantage is that the processing speed is faster than a List. It is created using parentheses (( )).
 
 ```python
 numbers = (10, 20, 30)
