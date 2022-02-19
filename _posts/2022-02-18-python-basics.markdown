@@ -106,7 +106,7 @@ x = lambda y: y + 1
 
 **Comment**
 
-Java's single-line comment starts with two forward slashes (//), while in Python, a comment starts with a hash (#). We can also use triple quotations (&#39;&#39;&#39;) at the beginning and end of the multi-line comments. One good tip is to drag the lines we want to change into the comments, and press the shortcut 'Ctrl + / .'
+Java's single-line comment starts with two forward slashes (//), while in Python, a comment starts with a hash (#). We can also use triple quotations (&#39;&#39;&#39;) at the beginning and end of a multi-line comment. One good tip is to drag the lines we want to change into the comments, and press the shortcut 'Ctrl + / .'
 
 ```python
 # This is a comment
