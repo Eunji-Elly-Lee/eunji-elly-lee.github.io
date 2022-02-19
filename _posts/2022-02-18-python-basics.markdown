@@ -14,11 +14,11 @@ Python is known to have a concise syntax and grammar with the use of indentation
 <img src="https://www.python.org/static/img/python-logo@2x.png" width="80%">
 </div>
 
-<!-- <div style="text-align:center">
+<div style="text-align:center">
 <video width="65%" controls>
-<source src="/assets/video/?????????????????????.mp4" type="video/mp4">
+<source src="/assets/video/python_video.mp4" type="video/mp4">
 </video>
-</div> -->
+</div>
 
 ### Python's Environment Setup
 
