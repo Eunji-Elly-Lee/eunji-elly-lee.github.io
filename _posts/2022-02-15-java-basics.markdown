@@ -11,7 +11,7 @@ categories: [Java]
 One of Java's big features is that it is a platform-independent language. It means, when compiling Java code, a Java compiler generates a class file whose extension is .class that is byte code, which can run on any Java virtual machine regardless of the underlying computer architecture. Java is extensively used worldwide with this advantage and a feature of the English-like programming language.
 
 <div style="text-align:center">
-<img src="https://w.namu.la/s/95f3898eb4996f6ba5a3930b212b295da56e062e9427da87331a510d3d868bd81f24d10d242ca0d93f4ad94053b9321549cb4590ea815a8d39ba92cde1a7da442da8503354444ceb7fa3f72486d3d3d29e68be1fb757a80856f09f2914f07322" width="50%">
+<img src="/assets/img/python_img/java_log.png" width="50%">
 </div>
 
 ### Java's Basic Terminologies
