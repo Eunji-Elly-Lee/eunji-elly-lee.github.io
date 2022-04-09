@@ -40,3 +40,50 @@ For more information about pygame, please refer to the two links below.
 
 <https://github.com/pygame/pygame>
 
+### Basic Frame 
+
+To use pygame's modules, initialization and shutdown are essential. They are `pygame.init()` and `pygame.quit()`, and all the codes for the game will be written between these two.
+
+To set the size of the game window, create variables for the width and height, and then put them in `set_mode` method of **display** module. Declare the object created to a variable so that it can continue to be used. Also, we can set the title of the game using the `set_caption` method.
+
+Create a time object with `time.clock()` to set FPS (frames per second), the frame rate, and then set the value using the `tick` method. The higher the value, the faster the game running and feels more natural. 
+
+We will prepare **while** statement for game running and **for** statement for event handling. `update()` method of **display** module is required within the **while** statement because the screen must be drawn continuously during the game running.
+
+
+```python
+import pygame
+
+# initialization
+pygame.init()
+
+# screen setting
+screen_width = 640
+screen_height = 480
+screen = pygame.display.set_mode((screen_width, screen_height))
+pygame.display.set_caption("Simple Pang Arcade")
+
+# create time object
+clock = pygame.time.Clock()
+
+# game running
+running = True 
+while running:
+    # set FPS
+    clock.tick(30) 
+    
+    # event handling
+    for event in pygame.event.get(): 
+        # when closing the window by clicking the X button in the game window
+        if event.type == pygame.QUIT:
+            # stop the game 
+            running = False
+    
+    # update screen continuously
+    pygame.display.update() 
+
+# shut down
+pygame.quit()
+```
+
+We have completed the basic frame for game development. We are going to use this to make a game in earnestly.
