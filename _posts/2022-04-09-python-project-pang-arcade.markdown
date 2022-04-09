@@ -14,11 +14,11 @@ We will learn the functions of pygame by creating a simple version of Pang which
 <img src="https://blog.kakaocdn.net/dn/wbylH/btqEq7mRkqZ/6ZNFUVAMiNR4bWccWMrbmk/img.gif" width="80%">
 </div>
 
-<div style="text-align:center">
+<!-- <div style="text-align:center">
 <video width="65%" controls>
 <source src="/assets/video/python_video.mp4" type="video/mp4">
 </video>
-</div>
+</div> -->
 
 ### Pygame Installation
 
@@ -37,5 +37,6 @@ To be more clearly, let's create a test file to make sure that the installation 
 For more information about pygame, please refer to the two links below.
 
 <https://www.pygame.org/news>
+
 <https://github.com/pygame/pygame>
 
