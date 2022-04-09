@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Python Project: Pang Arcade"
-date:       2022-04-10
+date:       2022-04-09
 image:      python_code.jpg
 categories: [Python]
 ---
