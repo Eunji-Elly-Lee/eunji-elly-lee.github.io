@@ -8,7 +8,7 @@ categories: [Python]
 
 <p class="intro"><span class="dropcap">P</span>ython's <strong>pygame</strong> is a free library for game development.</p>
 
-We will learn the functions of **pygame** by creating a simple version of Pang which is a retro arcade game. Pang is a game in which a gamer moves a character from side to side, avoiding balloons, and firing weapons to eliminate balloons.
+We will learn the functions of **pygame** by creating a simple version of Pang which is a retro arcade game. Pang is a game in which a gamer moves a character from side to side, avoiding balls, and firing weapons to eliminate balls.
 
 <div style="text-align:center">
 <img src="https://blog.kakaocdn.net/dn/wbylH/btqEq7mRkqZ/6ZNFUVAMiNR4bWccWMrbmk/img.gif" width="80%">
@@ -106,7 +106,7 @@ A game requires images for visible operation. At this stage, we will just use si
 2. Stage: 640 * 50
 3. Character: 33 * 60
 4. Weapon: 20 * 430
-5. Balloons: 160 * 160, 80 * 80, 40 * 40, 20 * 20
+5. Balls: 160 * 160, 80 * 80, 40 * 40, 20 * 20
 
 <div style="text-align:center">
 <img src="/assets/img/python_img/simple_shapes.png" width="80%">
@@ -225,8 +225,8 @@ if event.type == pygame.KEYDOWN:
 
 # move up weapons adjusting y position
 weapons = [ [w[0], w[1] - weapon_speed] for w in weapons]
-# when weapon reaches at top
 # save only weapons whose y position is greater than 0
+# weapon that reaches the top (y <= 0) is removed
 weapons = [ [w[0], w[1]] for w in weapons if w[1] > 0]
 
 # display images
@@ -237,5 +237,146 @@ for weapon_x_pos, weapon_y_pos in weapons:
 
 screen.blit(stage, (0, screen_height - stage_height))
 screen.blit(character, (character_x_pos, character_y_pos))
+```
+
+Now, let's create the balls and make them move. Put four images of the balls in **List**, and put the speeds that will be applied differently depending on the size in another **List**. In another **List** to manage the balls that will appear on the screen, we will put the biggest ball initially. To adjust the position of the balls, `enumerate` function is used that allows the index and value to be tracked together. The balls will bounce around on the screen and change directions when they reach the wall. Place the display code of the balls directly below the weapon's one.
+
+```python
+# create balls
+ball_images = [
+    pygame.image.load(os.path.join(image_path, "ball01.png")),
+    pygame.image.load(os.path.join(image_path, "ball02.png")),
+    pygame.image.load(os.path.join(image_path, "ball03.png")),
+    pygame.image.load(os.path.join(image_path, "ball04.png"))]
+# speeds of balls
+ball_speed_y = [-18, -15, -12, -9] 
+# balls on the screen
+balls = []
+# the initial biggest ball
+balls.append({
+    "pos_x" : 50,
+    "pos_y" : 50,
+    "img_idx" : 0,
+    "to_x" : 3,
+    "to_y" : -6,
+    "init_spd_y" : ball_speed_y[0]})
+
+# position of balls
+for ball_idx, ball_val in enumerate(balls):
+    ball_pos_x = ball_val["pos_x"]
+    ball_pos_y = ball_val["pos_y"]
+    ball_img_idx = ball_val["img_idx"]
+
+    ball_size = ball_images[ball_img_idx].get_rect().size
+    ball_width = ball_size[0]
+    ball_height = ball_size[1]
+
+    # turn around when reaching the left and right ends
+    if ball_pos_x < 0 or ball_pos_x > screen_width - ball_width:
+        ball_val["to_x"] = ball_val["to_x"] * -1
+        
+    # turn up when reaching the stage
+    if ball_pos_y >= screen_height - stage_height - ball_height:  
+        ball_val["to_y"] = ball_val["init_spd_y"]
+    # increase speed and move down ball
+    else:
+        ball_val["to_y"] += 0.5
+        
+    ball_val["pos_x"] += ball_val["to_x"]
+    ball_val["pos_y"] += ball_val["to_y"]
+
+for inx, val in enumerate(balls):
+    ball_pos_x = val["pos_x"]
+    ball_pos_y = val["pos_y"]
+    ball_img_idx = val["img_idx"]
+    screen.blit(ball_images[ball_img_idx], (ball_pos_x, ball_pos_y))
+```
+
+We will handle events when the character and the ball touch and the ball and the weapon touch. First, update the position of the character and balls, and make the game end when they touch. We also update the position of the weapons and make the ball be divided when the weapon touches it. The smallest size ball will be removed, otherwise the two divided balls will bounce off in different directions. The weapon that touches the ball will be removed. The determination of contact is made using `colliderect` method.
+
+```python
+# variables for weapons and balls to be removed
+weapon_to_remove = -1
+ball_to_remove = -1
+
+# update character position
+character_rect = character.get_rect()
+character_rect.left = character_x_pos
+character_rect.top = character_y_pos
+
+for ball_idx, ball_val in enumerate(balls):
+    ball_pos_x = ball_val["pos_x"]
+    ball_pos_y = ball_val["pos_y"]
+    ball_img_idx = ball_val["img_idx"]
+
+    # update ball position
+    ball_rect = ball_images[ball_img_idx].get_rect()
+    ball_rect.left = ball_pos_x
+    ball_rect.top = ball_pos_y
+
+    # when character and ball touch
+    if character_rect.colliderect(ball_rect):
+        running = False
+        break
+
+    for weapon_idx, weapon_val in enumerate(weapons):
+        weapon_pos_x = weapon_val[0]
+        weapon_pos_y = weapon_val[1]
+
+        # update weapon position    
+        weapon_rect = weapon.get_rect()
+        weapon_rect.left = weapon_pos_x
+        weapon_rect.top = weapon_pos_y
+
+        # when weapon and ball touch
+        if weapon_rect.colliderect(ball_rect):
+            weapon_to_remove = weapon_idx
+            ball_to_remove = ball_idx
+
+            # not the smallest ball
+            if ball_img_idx < 3: 
+                ball_width = ball_rect.size[0]
+                ball_height = ball_rect.size[1]
+                    
+                small_ball_rect = ball_images[ball_img_idx + 1].get_rect()
+                small_ball_width = small_ball_rect.size[0]
+                small_ball_height = small_ball_rect.size[1]
+
+                # ball bouncing to the left
+                balls.append({
+                    "pos_x" : ball_pos_x + (ball_width / 2) - (small_ball_width / 2),
+                    "pos_y" : ball_pos_y + (ball_height / 2) - (small_ball_height / 2),
+                    "img_idx" : ball_img_idx + 1,
+                    "to_x" : -3, 
+                    "to_y" : -6,
+                    "init_spd_y" : ball_speed_y[ball_img_idx + 1]})
+                    
+                # ball bouncing to the right
+                balls.append({
+                    "pos_x" : ball_pos_x + (ball_width / 2) - (small_ball_width / 2),
+                    "pos_y" : ball_pos_y + (ball_height / 2) - (small_ball_height / 2),
+                    "img_idx" : ball_img_idx + 1,
+                    "to_x" : 3, 
+                    "to_y" : -6,
+                    "init_spd_y" : ball_speed_y[ball_img_idx + 1]}) 
+            break
+    else:
+        continue 
+    break 
+
+# remove contacted ball
+if ball_to_remove > -1:
+    del balls[ball_to_remove]
+    ball_to_remove = -1
+
+# remove contacted weapon
+if weapon_to_remove > -1:
+    del weapons[weapon_to_remove]
+    weapon_to_remove = -1
+
+# when all balls removed
+if len(balls) == 0:
+    game_result = "Mission Complete"
+    running = False
 ```
 
