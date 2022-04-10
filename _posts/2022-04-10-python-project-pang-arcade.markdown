@@ -148,8 +148,59 @@ character_y_pos = screen_height - character_height - stage_height
 Use `blit` method to display the created background, stage, and character on the screen. These codes will be placed above `update()` method in the **while** statement. Because the background is the same size as the screen, set it to (0, 0), which is the upper left position. Set the stage at the bottom of the screen and the character at the center just above the stage.
 
 ```python
+# display images
 screen.blit(background, (0, 0))
 screen.blit(stage, (0, screen_height - stage_height))
 screen.blit(character, (character_x_pos, character_y_pos))
 ```
 
+Let's make the character move. The character will move on the x-axis which means from side to side and have the speed appropriately. The character's movement will take place in the events of the left and right keys. When the left key is pressed, it will move from the position on the x-axis to the left by the speed set, so use subtraction to adjust the position. For the right key, addition will be used to reposition the character to the right. Yes, the speed can actually be thought of as the character's unit of movement.
+
+We also need to consider and handle the situations when the event that was pressing the key is released and when the character reaches both left and right ends.
+
+```python
+# direction of moving
+character_to_x = 0
+# speed of character
+character_speed = 5
+
+# event handling
+for event in pygame.event.get(): 
+    # close the window by clicking the X button of the game window
+    if event.type == pygame.QUIT:
+        # stop the game 
+        running = False
+
+    # pressing key event
+    if event.type == pygame.KEYDOWN:
+        # move character to the left using the left key
+        if event.key == pygame.K_LEFT:
+            character_to_x -= character_speed
+        # move character to the left using the left key
+        elif event.key == pygame.K_RIGHT:
+            character_to_x += character_speed
+
+    # releasing key event
+    if event.type == pygame.KEYUP:
+        if event.key == pygame.K_LEFT or event.key == pygame.K_RIGHT:
+            character_to_x = 0
+
+# reposition character
+character_x_pos += character_to_x
+
+# when character reaches left end
+if character_x_pos < 0:
+    character_x_pos = 0
+# when character reaches right end
+elif character_x_pos > screen_width - character_width:
+    character_x_pos = screen_width - character_width
+```
+
+We will create a weapon and write a code to fire the weapon in the event when the space key is pressed.
+
+```python
+
+
+
+
+```
