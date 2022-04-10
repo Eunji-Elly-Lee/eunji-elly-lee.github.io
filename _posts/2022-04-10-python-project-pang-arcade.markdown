@@ -145,7 +145,7 @@ character_x_pos = (screen_width / 2) - (character_width / 2)
 character_y_pos = screen_height - character_height - stage_height
 ```
 
-Use `blit` method to display the created background, stage, and character on the screen. These codes will be placed above `update()` method in the **while** statement. Because the background is the same size as the screen, set it to (0, 0), which is the upper left position. Set the stage at the bottom of the screen and the character at the center just above the stage.
+Use `blit` method to display the created background, stage, and character on the screen. These codes will be placed above `update()` method in the **while** statement. Set the background to (0, 0) which is the upper left position because it is the same size as the screen. Set the stage at the bottom of the screen and the character at the center just above the stage.
 
 ```python
 # display images
@@ -154,7 +154,7 @@ screen.blit(stage, (0, screen_height - stage_height))
 screen.blit(character, (character_x_pos, character_y_pos))
 ```
 
-Let's make the character move. The character will move on the x-axis which means from side to side and have the speed appropriately. The character's movement will take place in the events of the left and right keys. When the left key is pressed, it will move from the position on the x-axis to the left by the speed set, so use subtraction to adjust the position. For the right key, addition will be used to reposition the character to the right. Yes, the speed can actually be thought of as the character's unit of movement.
+Let's make the character move. The character will move on the x-axis which means from side to side and have the speed appropriately. The character's movement will take place in the events of the left and right keys. When the left key is pressed, it will move from the position on the x-axis to the left by the speed set, so use subtraction to adjust the position. For the right key, addition will be used to reposition the character to the right. Yes, the speed can actually be thought of as the unit of movement.
 
 We also need to consider and handle the situations when the event that was pressing the key is released and when the character reaches both left and right ends.
 
@@ -196,11 +196,46 @@ elif character_x_pos > screen_width - character_width:
     character_x_pos = screen_width - character_width
 ```
 
-We will create a weapon and write a code to fire the weapon in the event when the space key is pressed.
+We will create a weapon and write a code to handle the event of the weapon. A weapon is fired when the space key is pressed, the x-axis position and y-axis position of the weapon are stored in **List** so that a number of weapons fired can be managed. Weapons automatically move up and then disappear when they reach the end. When displaying the weapons to the screen, the code of the weapons should be written before the stage's one because the layers of images follow the order of codes.
 
 ```python
+# create weapon
+weapon = pygame.image.load(os.path.join(image_path, "weapon.png"))
+weapon_size = weapon.get_rect().size
+weapon_width = weapon_size[0]
 
+# weapon list
+weapons = []
+# speed of weapon
+weapon_speed = 10
 
+# pressing key event
+if event.type == pygame.KEYDOWN:
+    # move character to the left using the left key
+    if event.key == pygame.K_LEFT:
+        character_to_x -= character_speed
+    # move character to the left using the left key
+    elif event.key == pygame.K_RIGHT:
+        character_to_x += character_speed
+    # fire weapon from the center of character
+    elif event.key == pygame.K_SPACE:
+        weapon_x_pos = character_x_pos + (character_width / 2) - (weapon_width / 2)
+        weapon_y_pos = character_y_pos
+        weapons.append([weapon_x_pos, weapon_y_pos])
 
+# move up weapons adjusting y position
+weapons = [ [w[0], w[1] - weapon_speed] for w in weapons]
+# when weapon reaches at top
+# save only weapons whose y position is greater than 0
+weapons = [ [w[0], w[1]] for w in weapons if w[1] > 0]
 
+# display images
+screen.blit(background, (0, 0))
+
+for weapon_x_pos, weapon_y_pos in weapons:
+    screen.blit(weapon, (weapon_x_pos, weapon_y_pos))
+
+screen.blit(stage, (0, screen_height - stage_height))
+screen.blit(character, (character_x_pos, character_y_pos))
 ```
+
