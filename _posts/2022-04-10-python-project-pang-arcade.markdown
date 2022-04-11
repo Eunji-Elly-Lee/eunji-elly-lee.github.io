@@ -14,12 +14,6 @@ We will learn the functions of **pygame** by creating a simple version of Pang w
 <img src="https://blog.kakaocdn.net/dn/wbylH/btqEq7mRkqZ/6ZNFUVAMiNR4bWccWMrbmk/img.gif" width="80%">
 </div>
 
-<!-- <div style="text-align:center">
-<video width="65%" controls>
-<source src="/assets/video/python_video.mp4" type="video/mp4">
-</video>
-</div> -->
-
 ### Pygame Installation
 
 First, open a terminal window in VS Code and run `pip install pygame`. If we can see a statement "Successfully installed pygame," it means that the installation has been done well. It is very simple and easy.
@@ -42,7 +36,7 @@ For more information about **pygame**, please refer to the two links below.
 
 ### Basic Frame 
 
-To use **pygame**'s modules, initialization and shutdown are essential. They are `pygame.init()` and `pygame.quit()`, and all the codes for the game will be written between these two.
+To use **pygame**'s modules, initialization and shutdown are essential. They are `pygame.init()` and `pygame.quit()`, and all codes for the game will be written between these two.
 
 To set the size of the game window, create variables for the width and height, and then put them in `set_mode` method of **display** module. Declare the object created to a variable so that it can continue to be used. Also, we can set the title of the game using the `set_caption` method.
 
@@ -673,4 +667,12 @@ We can make the game look better by applying advanced images.
 
 <div style="text-align:center">
 <img src="/assets/img/python_img/advanced_demo.png" width="80%">
+</div>
+
+The actual demo of the game can be found in the video below. If the game code doesn't work, please leave a comment.
+
+<div style="text-align:center">
+<video width="65%" controls>
+<source src="/assets/video/python_pang.mp4" type="video/mp4">
+</video>
 </div>
