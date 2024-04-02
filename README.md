@@ -1,6 +1,6 @@
 ![preview](/assets/img/preview.png)
 
-This is Eunji Elly Lee's blog. Posts related to basics and core concepts of Java and Python are uploaded.
+This is Elly Lee's blog. Posts related to basics and core concepts of Java and Python are uploaded.
 
 #### [View Elly's Blog](https://eunji-elly-lee.github.io/)
 
@@ -15,7 +15,7 @@ This is Eunji Elly Lee's blog. Posts related to basics and core concepts of Java
 
 ## Refference
 
-This blog is based on Long Haul, a free Jekyll theme from BRIAN MAIER JR..
+This blog is based on Long Haul, a free Jekyll theme from BRIAN MAIER JR.
 
 #### [View Long Haul Demo](http://brianmaierjr.com/long-haul)
 #### [View Long Haul Code](https://github.com/brianmaierjr/long-haul)
